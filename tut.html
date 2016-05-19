@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>JS - Viwetter.de</title>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono:400,700' rel='stylesheet' type='text/css'>
+  <style type="text/css">code{white-space: pre; font-family: "Fira Mono", monospace;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h1 id="javascript">Javascript</h1>
+<h2 id="command-line-interface">Command Line Interface</h2>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">// &lt;-- Das ist ein Kommentar</span>
+<span class="co">// CLI öffnen mit STRG + Shift + I</span>
+<span class="co">// Rechnen:</span>
+<span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span>   <span class="co">// = 5</span>
+<span class="dv">2</span> <span class="op">-</span> <span class="dv">3</span>   <span class="co">// = -1</span>
+<span class="dv">2</span> <span class="op">*</span> <span class="dv">5</span>   <span class="co">// = 10</span>
+<span class="dv">5</span> / <span class="dv">4</span>   <span class="co">// = 1.25 &lt;-- Punkt als Komma</span>
+
+<span class="co">// Strings = Zeichenketten:</span>
+<span class="st">&quot;Hallo&quot;</span>
+<span class="st">&quot;Hallo &quot;</span> <span class="op">+</span> <span class="st">&quot;Welt&quot;</span> <span class="co">// Konkatenation = Verketten</span>
+<span class="st">&quot;Ich bin &quot;</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">+</span> <span class="st">&quot; Jahre alt&quot;</span> <span class="co">// Zahlen &amp; Text</span>
+
+<span class="co">// Variablen</span>
+<span class="kw">var</span> alt <span class="op">=</span> <span class="dv">14</span>
+<span class="kw">var</span> name <span class="op">=</span> <span class="st">&quot;Markus&quot;</span>
+alt <span class="op">+</span> name <span class="co">// = &quot;14Markus&quot;</span>
+
+<span class="co">// Funktionen f(x) =&gt; y</span>
+<span class="kw">function</span> <span class="at">add2</span>( zahl ) <span class="op">{</span>                 <span class="co">// Funktion mit Name &quot;add2&quot;, Parameter &quot;zahl&quot;</span>
+    <span class="kw">var</span> loesung <span class="op">=</span> zahl <span class="op">+</span> <span class="dv">2</span>              <span class="co">// Berechnung</span>
+    <span class="at">print</span>(zahl <span class="op">+</span> <span class="st">&quot; + 2 = &quot;</span> <span class="op">+</span> loesung )  <span class="co">// Ausgeben eines Wertes an die Konsole</span>
+    <span class="cf">return</span> loesung                      <span class="co">// Rückgabe von &quot;y&quot;-Wert</span>
+<span class="op">}</span>
+<span class="co">// Falls &quot;ReferenceError: print is not defined&quot;: print = console.log</span>
+<span class="at">add2</span>(<span class="dv">10</span>) <span class="co">// &quot;10 + 2 = 12&quot; &amp;= 12</span>
+<span class="at">add2</span>(<span class="dv">15</span>) <span class="co">// &quot;15 + 2 = 17&quot; &amp;= 17</span>
+<span class="at">add2</span>(<span class="at">add2</span>(<span class="dv">5</span>)) <span class="co">// == 9</span>
+<span class="at">add2</span>(<span class="st">&quot;Wow&quot;</span>) <span class="co">// == &quot;Wow2&quot;</span>
+
+<span class="co">// Booleans = Wahrheitswerte</span>
+<span class="dv">2</span> <span class="op">==</span> <span class="dv">2</span> <span class="co">// true = wahr</span>
+<span class="dv">3</span> <span class="op">!=</span> <span class="dv">2</span> <span class="co">// true</span>
+<span class="dv">2</span> <span class="op">!=</span> <span class="dv">2</span> <span class="co">// false</span>
+<span class="dv">2</span> <span class="op">&lt;</span> <span class="dv">3</span>  <span class="co">// true</span>
+<span class="dv">2</span> <span class="op">&lt;</span> <span class="dv">3</span>  <span class="co">// false</span>
+<span class="dv">3</span> <span class="op">&lt;=</span> <span class="dv">3</span> <span class="co">// true</span>
+<span class="dv">2</span> <span class="op">&gt;=</span> <span class="dv">3</span> <span class="co">// false</span>
+
+
+
+
+<span class="co">// IF ELSE Bedingungen</span>
+<span class="kw">function</span> <span class="at">absolut</span>( zahl ) <span class="op">{</span>
+    <span class="cf">if</span> (zahl <span class="op">&lt;</span> <span class="dv">0</span>) <span class="op">{</span>
+        <span class="cf">return</span> (<span class="op">-</span><span class="dv">1</span> <span class="op">*</span> zahl)
+    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span>
+        <span class="cf">return</span> zahl
+    <span class="op">}</span>
+<span class="op">}</span>
+
+<span class="co">// Arrays = &quot;Listen&quot;</span>
+<span class="kw">var</span> q <span class="op">=</span> [<span class="dv">0</span><span class="op">,</span><span class="dv">1</span><span class="op">,</span><span class="dv">4</span><span class="op">,</span><span class="dv">9</span><span class="op">,</span><span class="dv">16</span><span class="op">,</span><span class="dv">25</span><span class="op">,</span><span class="dv">36</span>]
+<span class="co">// index:0 1 2 3  4  5  6</span>
+q[<span class="dv">0</span>] <span class="co">// = 0</span>
+q[<span class="dv">1</span>] <span class="co">// = 1</span>
+q[<span class="dv">4</span>] <span class="co">// = 16</span>
+
+<span class="co">// Schleifen</span>
+<span class="cf">for</span> (<span class="kw">var</span> index <span class="kw">in</span> q) <span class="op">{</span>
+    <span class="at">print</span>(index<span class="op">,</span> q[index])
+<span class="op">}</span>
+
+d <span class="op">=</span> []      <span class="co">// Leeres Array</span>
+d[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">1</span>    <span class="co">// Werte hinzufügen</span>
+d[<span class="dv">1</span>] <span class="op">=</span> <span class="op">-</span><span class="dv">10</span>
+<span class="at">print</span>(d)    <span class="co">// [ 1, -10 ]</span>
+
+<span class="co">/* Aufgabe:</span>
+<span class="co">Schreibe eine Funktion,</span>
+<span class="co">die den Absolutwert aller Werte eines Arrays</span>
+<span class="co">als Array zurückgibt</span>
+<span class="co">absarr([1,0,-1,-2,-3]) =&gt; [1,0,1,2,3]</span>
+<span class="co">*/</span>
+
+<span class="kw">function</span> <span class="at">absarr</span>( ar ) <span class="op">{</span>
+    re <span class="op">=</span> []
+    <span class="cf">for</span> (<span class="kw">var</span> i <span class="kw">in</span> ar) <span class="op">{</span>
+        re[i] <span class="op">=</span> <span class="at">absolut</span>(ar[i])
+    <span class="op">}</span>
+    <span class="cf">return</span> re
+<span class="op">}</span></code></pre></div>
+</body>
+</html>

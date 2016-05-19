@@ -1,0 +1,86 @@
+<html>
+<head>
+	<title>Javascript - Viwetter.de</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #c2c2c2;
+}
+h1 {
+	font-family: monospace;
+	text-align: center;
+	padding: .5em 0;
+	font-size: 3em;
+	color: white;
+	background-color: red;
+}
+a {
+	font-family: monospace;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 1em;
+	color: white;
+	background-color: #444;
+	display: block;
+	text-decoration: none;
+	transition: color .3s, background-color .3s;
+}
+a:hover {
+	color: red;
+	background-color: white;
+}
+a::nth(2) {
+	background-color: blue;
+}
+.footer {
+	padding: 1em;
+	color: rgb(0, 0, 0);
+	display:block;
+	background-color: rgb(111, 111, 111);
+	font-family: sans-serif;
+}
+.footer a {
+	font-family: monospace;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0;
+	color: rgb(70, 7, 7);
+	background-color: inherit;
+	display: inline;;
+	text-decoration: none;
+	transition: color .3s, background-color .3s;
+}
+#nav {
+	margin: auto;
+}
+@media (min-width: 500px) {
+	h1:after {
+		content: "//19.05.2015"
+	}
+}
+@media (min-width: 700px) {
+	h1 {
+		padding: 1em 3em;
+		text-align: left;
+	}
+}
+</style>
+<h1>Javascript</h1>
+<div id="nav">
+<a href="tut.html" 	target="_blank">Mitlesen</a>
+<a href="play.html" 		target="_blank">Übungsseite</a>
+<a href="t.pdf" 	target="_blank">Aufgaben</a>
+<a href="http://mtib.github.io/ludum35" target="_blank">Ludum Dare 35</a>
+<a href="http://mtib.github.io/ludum35" target="_blank">Quelltext(LD35)</a>
+<a href="http://hextris.io" target="_blank">Zusatz</a>
+<a href="http://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm">NPM (Leftpad)</a>
+<span class="footer">| &copy; mtib | thx to <a href="https://learnxinyminutes.com/docs/javascript/">learnXinYminutes.com</a> | <a href="http://ludumdare.com/compo">LD35</a> | <a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=26539">Sock Wars</a> | <a href="https://github.com/Hextris/hextris">hextris</a> |</span>
+</div>
+</body>
